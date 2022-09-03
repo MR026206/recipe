@@ -27,10 +27,7 @@ For building and running the application you need:
 
 ## Running locally
 
-`git clone git@github.com:hamed-rahmani/recipe-manager.git`
-
-`cd recipe-manager`
-
+`git clone git@github.com:MR026206/recipe.git`
 
 
 Alternatively you can use the Spring Boot Maven plugin like so:

@@ -13544,3 +13544,184 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'lo
 2022-09-03 14:58:42,806 INFO [RMI TCP Connection(11)-127.0.0.1] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-09-03 14:58:42,810 INFO [RMI TCP Connection(11)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
 2022-09-03 14:58:42,813 INFO [RMI TCP Connection(11)-127.0.0.1] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-09-03 15:34:04,511 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:305] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lacuisine.recipe.integration.RecipeControllerIntegrationTest], using SpringBootContextLoader
+2022-09-03 15:34:04,523 INFO [main] o.s.t.c.s.AbstractContextLoader [AbstractContextLoader.java:264] Could not detect default resource locations for test class [com.lacuisine.recipe.integration.RecipeControllerIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-09-03 15:34:04,846 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:245] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-09-03 15:34:04,897 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:174] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@66629f63, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@841e575, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@27a5328c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e5f4170, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6c345c5f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b5966e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@65e61854, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1568159, org.springframework.test.context.event.EventPublishingTestExecutionListener@4fcee388, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6f80fafe, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3af17be2, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@f9879ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@37f21974, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5f4d427e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6e521c1e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@224b4d61, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5d5d9e5]
+2022-09-03 15:34:05,638 INFO [main] c.l.r.i.RecipeControllerIntegrationTest [StartupInfoLogger.java:55] Starting RecipeControllerIntegrationTest using Java 11.0.10 on L138034 with PID 23092 (started by mrangiramani in C:\tmp\recipe)
+2022-09-03 15:34:05,639 INFO [main] c.l.r.i.RecipeControllerIntegrationTest [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:34:07,430 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-03 15:34:07,550 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
+2022-09-03 15:34:08,495 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-03 15:34:08,621 INFO [main] o.h.Version [Version.java:44] HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-03 15:34:08,976 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-03 15:34:09,908 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-09-03 15:34:10,257 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-09-03 15:34:10,293 INFO [main] o.h.d.Dialect [Dialect.java:175] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-09-03 15:34:11,262 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-03 15:34:11,277 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:34:12,537 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-03 15:34:13,381 INFO [main] o.s.b.a.h.H2ConsoleAutoConfiguration [H2ConsoleAutoConfiguration.java:87] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-03 15:34:15,945 INFO [main] o.s.b.t.m.w.SpringBootMockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:15,946 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:15,948 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2022-09-03 15:34:16,022 INFO [main] c.l.r.i.RecipeControllerIntegrationTest [StartupInfoLogger.java:61] Started RecipeControllerIntegrationTest in 11.018 seconds (JVM running for 12.934)
+2022-09-03 15:34:16,374 INFO [main] c.l.r.r.RecipeController [RecipeController.java:25] addRecipe(PostRecipe recipe) : class PostRecipe {
+    name: FishFry
+    vegetarian: false
+    servingCapacity: 6
+    ingredients: [class PostIngredients {
+        ingredient: fish
+    }, class PostIngredients {
+        ingredient: oil
+    }, class PostIngredients {
+        ingredient: leaves
+    }]
+    recipeInstruction: oven
+}
+2022-09-03 15:34:16,700 INFO [main] c.l.r.r.RecipeController [RecipeController.java:25] addRecipe(PostRecipe recipe) : class PostRecipe {
+    name: Pizza
+    vegetarian: true
+    servingCapacity: 4
+    ingredients: [class PostIngredients {
+        ingredient: bread
+    }, class PostIngredients {
+        ingredient: cheese
+    }, class PostIngredients {
+        ingredient: olive
+    }]
+    recipeInstruction: Oven
+}
+2022-09-03 15:34:16,718 INFO [main] c.l.r.r.RecipeController [RecipeController.java:50] getAllRecipe(): 
+2022-09-03 15:34:16,951 INFO [main] c.l.r.r.RecipeController [RecipeController.java:42] getRecipe(Long recipeId) : 1
+2022-09-03 15:34:16,994 INFO [main] c.l.r.r.RecipeController [RecipeController.java:50] getAllRecipe(): 
+2022-09-03 15:34:17,007 INFO [main] c.l.r.r.RecipeController [RecipeController.java:57] updateRecipe(Long recipeId, UpdateRecipe postRecipe)  : 
+2022-09-03 15:34:17,076 INFO [main] c.l.r.r.RecipeController [RecipeController.java:50] getAllRecipe(): 
+2022-09-03 15:34:17,097 INFO [main] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:34:17,152 INFO [main] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:34:17,173 INFO [main] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:34:17,203 INFO [main] c.l.r.r.RecipeController [RecipeController.java:42] getRecipe(Long recipeId) : 11
+2022-09-03 15:34:17,213 INFO [main] c.l.r.r.RecipeController [RecipeController.java:33] deleteRecipe(Long recipeId) : 11
+2022-09-03 15:34:17,224 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:305] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.lacuisine.recipe.RecipeApplicationTests], using SpringBootContextLoader
+2022-09-03 15:34:17,228 INFO [main] o.s.t.c.s.AbstractContextLoader [AbstractContextLoader.java:264] Could not detect default resource locations for test class [com.lacuisine.recipe.RecipeApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-09-03 15:34:17,229 INFO [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils [AnnotationConfigContextLoaderUtils.java:83] Could not detect default configuration classes for test class [com.lacuisine.recipe.RecipeApplicationTests]: RecipeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-09-03 15:34:17,250 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [SpringBootTestContextBootstrapper.java:238] Found @SpringBootConfiguration com.lacuisine.recipe.RecipeApplication for test class com.lacuisine.recipe.RecipeApplicationTests
+2022-09-03 15:34:17,260 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:245] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+2022-09-03 15:34:17,263 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [AbstractTestContextBootstrapper.java:174] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c020c8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3d3e9163, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@66464f27, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@75392381, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@13198b8e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5ae5a507, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e8ef60b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3217e970, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d0d5147, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1a370c7c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@63f08f9f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6e21b6f8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@69a14512, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4bd7e0b6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2cbc0224, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4fc9e73d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2ca3a203]
+2022-09-03 15:34:17,352 INFO [main] c.l.r.RecipeApplicationTests [StartupInfoLogger.java:55] Starting RecipeApplicationTests using Java 11.0.10 on L138034 with PID 23092 (started by mrangiramani in C:\tmp\recipe)
+2022-09-03 15:34:17,352 INFO [main] c.l.r.RecipeApplicationTests [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:34:18,103 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-03 15:34:18,137 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2022-09-03 15:34:18,349 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-03 15:34:18,363 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-2 - Starting...
+2022-09-03 15:34:18,364 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-2 - Start completed.
+2022-09-03 15:34:18,365 INFO [main] o.h.d.Dialect [Dialect.java:175] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-09-03 15:34:18,441 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-03 15:34:18,443 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:34:18,774 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-03 15:34:19,083 INFO [main] o.s.b.a.h.H2ConsoleAutoConfiguration [H2ConsoleAutoConfiguration.java:87] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-03 15:34:20,176 INFO [main] c.l.r.RecipeApplicationTests [StartupInfoLogger.java:61] Started RecipeApplicationTests in 2.908 seconds (JVM running for 17.088)
+2022-09-03 15:34:20,432 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,433 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,434 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,568 INFO [main] c.l.r.r.RecipeController [RecipeController.java:57] updateRecipe(Long recipeId, UpdateRecipe postRecipe)  : 
+2022-09-03 15:34:20,621 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,621 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,622 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,628 INFO [main] c.l.r.r.RecipeController [RecipeController.java:25] addRecipe(PostRecipe recipe) : null
+2022-09-03 15:34:20,646 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,647 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,647 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,660 INFO [main] c.l.r.r.RecipeController [RecipeController.java:57] updateRecipe(Long recipeId, UpdateRecipe postRecipe)  : 
+2022-09-03 15:34:20,693 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,694 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,694 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,696 INFO [main] c.l.r.r.RecipeController [RecipeController.java:33] deleteRecipe(Long recipeId) : 12
+2022-09-03 15:34:20,716 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,717 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,718 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,725 INFO [main] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:34:20,759 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,760 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,761 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-09-03 15:34:20,762 INFO [main] c.l.r.r.RecipeController [RecipeController.java:25] addRecipe(PostRecipe recipe) : class PostRecipe {
+    name: Pasta
+    vegetarian: true
+    servingCapacity: 4
+    ingredients: null
+    recipeInstruction: null
+}
+2022-09-03 15:34:20,783 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,784 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,785 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,787 INFO [main] c.l.r.r.RecipeController [RecipeController.java:33] deleteRecipe(Long recipeId) : 12
+2022-09-03 15:34:20,807 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,808 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,809 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2022-09-03 15:34:20,812 INFO [main] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:34:20,827 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,828 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,828 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,830 INFO [main] c.l.r.r.RecipeController [RecipeController.java:42] getRecipe(Long recipeId) : 12
+2022-09-03 15:34:20,852 INFO [main] o.s.m.w.MockServletContext [MockServletContext.java:455] Initializing Spring TestDispatcherServlet ''
+2022-09-03 15:34:20,853 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:525] Initializing Servlet ''
+2022-09-03 15:34:20,854 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2022-09-03 15:34:20,855 INFO [main] c.l.r.r.RecipeController [RecipeController.java:42] getRecipe(Long recipeId) : 12
+2022-09-03 15:34:21,079 INFO [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:34:21,084 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-09-03 15:34:21,090 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2022-09-03 15:34:21,099 INFO [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:34:21,101 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-2 - Shutdown initiated...
+2022-09-03 15:34:21,106 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-2 - Shutdown completed.
+2022-09-03 15:34:40,014 INFO [main] c.l.r.RecipeApplication [StartupInfoLogger.java:55] Starting RecipeApplication using Java 11.0.10 on L138034 with PID 30200 (C:\tmp\recipe\target\classes started by mrangiramani in C:\tmp\recipe)
+2022-09-03 15:34:40,018 INFO [main] c.l.r.RecipeApplication [SpringApplication.java:634] No active profile set, falling back to 1 default profile: "default"
+2022-09-03 15:34:41,181 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-03 15:34:41,243 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interfaces.
+2022-09-03 15:34:42,324 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8081 (http)
+2022-09-03 15:34:42,333 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8081"]
+2022-09-03 15:34:42,334 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-09-03 15:34:42,335 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-03 15:34:42,504 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-09-03 15:34:42,504 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 2428 ms
+2022-09-03 15:34:42,632 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2022-09-03 15:34:42,739 INFO [main] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2022-09-03 15:34:42,750 INFO [main] o.s.b.a.h.H2ConsoleAutoConfiguration [H2ConsoleAutoConfiguration.java:87] H2 console available at '/h2-ui'. Database available at 'jdbc:h2:mem:testdb'
+2022-09-03 15:34:42,867 INFO [main] o.h.j.i.u.LogHelper [LogHelper.java:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-03 15:34:42,908 INFO [main] o.h.Version [Version.java:44] HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-03 15:34:43,026 INFO [main] o.h.a.c.Version [JavaReflectionManager.java:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-03 15:34:43,118 INFO [main] o.h.d.Dialect [Dialect.java:175] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-09-03 15:34:43,567 INFO [main] o.h.e.t.j.p.i.JtaPlatformInitiator [JtaPlatformInitiator.java:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-03 15:34:43,577 INFO [main] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:34:43,872 WARN [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [JpaBaseConfiguration.java:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-03 15:34:44,653 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8081"]
+2022-09-03 15:34:44,689 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8081 (http) with context path ''
+2022-09-03 15:34:44,758 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8090 (http)
+2022-09-03 15:34:44,759 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8090"]
+2022-09-03 15:34:44,760 INFO [main] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-09-03 15:34:44,760 INFO [main] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-03 15:34:44,792 INFO [main] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-09-03 15:34:44,793 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:292] Root WebApplicationContext: initialization completed in 99 ms
+2022-09-03 15:34:44,805 INFO [main] o.s.b.a.e.w.EndpointLinksResolver [EndpointLinksResolver.java:58] Exposing 1 endpoint(s) beneath base path ''
+2022-09-03 15:34:45,011 INFO [main] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8090"]
+2022-09-03 15:34:45,015 INFO [main] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8090 (http) with context path ''
+2022-09-03 15:34:45,034 INFO [main] c.l.r.RecipeApplication [StartupInfoLogger.java:61] Started RecipeApplication in 5.426 seconds (JVM running for 6.009)
+2022-09-03 15:34:55,100 INFO [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-03 15:34:55,101 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-09-03 15:34:55,105 INFO [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2022-09-03 15:34:55,977 INFO [http-nio-8081-exec-3] o.s.a.AbstractOpenApiResource [AbstractOpenApiResource.java:368] Init duration for springdoc-openapi is: 532 ms
+2022-09-03 15:35:03,534 INFO [http-nio-8081-exec-6] c.l.r.r.RecipeController [RecipeController.java:50] getAllRecipe(): 
+2022-09-03 15:35:17,694 INFO [http-nio-8081-exec-5] c.l.r.r.RecipeController [RecipeController.java:42] getRecipe(Long recipeId) : 1
+2022-09-03 15:35:23,631 INFO [http-nio-8081-exec-4] c.l.r.r.RecipeController [RecipeController.java:33] deleteRecipe(Long recipeId) : 1
+2022-09-03 15:35:45,420 INFO [http-nio-8081-exec-7] c.l.r.r.RecipeController [RecipeController.java:25] addRecipe(PostRecipe recipe) : class PostRecipe {
+    name: pasta
+    vegetarian: true
+    servingCapacity: 3
+    ingredients: [class PostIngredients {
+        ingredient: pasta
+    }]
+    recipeInstruction: bbq
+}
+2022-09-03 15:35:57,991 INFO [http-nio-8081-exec-9] c.l.r.r.RecipeController [RecipeController.java:66] serachRecipe(RecipeSearchCriteria recipeSearchCriteria)  : 
+2022-09-03 15:36:23,075 INFO [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean [AbstractEntityManagerFactoryBean.java:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-03 15:36:23,078 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2022-09-03 15:36:23,082 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.

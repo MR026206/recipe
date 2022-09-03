@@ -1,0 +1,367 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/mukesh.rangiramani/Recipe/1.0.0
+info:
+  description: This is a Recipe API
+  version: "1.0.0"
+  title: Recipe API
+  contact:
+    email: Recipe@Recipe.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Recipes
+    description: allows users to manage their favourite recipes
+paths:
+  /api/v1/recipes:
+    post:
+      tags:
+        - Recipes
+      summary: add recipe
+      operationId: addRecipe
+      description: Add Recipe to the system
+      responses:
+        '201':
+          description: recipe created
+        '400':
+          description: 'invalid input, object invalid'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: an existing item already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostRecipe'
+        description: Recipe to add
+        
+    get:
+      tags:
+        - Recipes
+      summary: get all recipe
+      operationId: getAllRecipe
+      description: get Recipe from system
+      responses:
+        '200':
+          description: get all recipe
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOfRecipe'
+        '404':
+          description: 'not found'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /api/v1/recipes/search:
+    post:
+      tags:
+        - Recipes
+      summary: serach recipe
+      operationId: serachRecipe
+      description: serach Recipe information
+      responses:
+        '200':
+          description: Retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListOfRecipe'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/RecipeSearchCriteria"
+  /api/v1/recipes/{recipeId}:
+    delete:
+      tags:
+        - Recipes
+      summary: delete recipe
+      operationId: deleteRecipe
+      description: Delete Recipe from the system
+      responses:
+        '200':
+          description: Recipe deleted successfully
+        '400':
+          description: 'invalid input, object invalid'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '409':
+          description: an existing item already exists
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - $ref: '#/components/parameters/recipeIdParam'
+    put:
+      tags:
+        - Recipes
+      summary: update recipe
+      operationId: updateRecipe
+      description: update Recipe tp the system
+      responses:
+        '200':
+          description: recipe updated
+        '400':
+          description: 'invalid input, object invalid'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - $ref: '#/components/parameters/recipeIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/UpdateRecipe"
+    get:
+      tags:
+        - Recipes
+      summary: get recipe
+      operationId: getRecipe
+      description: get Recipe info
+      responses:
+        '200':
+          description: Retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '500':
+          description: An unhandled exception occurred
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - $ref: '#/components/parameters/recipeIdParam'
+components:
+  parameters:
+    recipeIdParam:
+      name: recipeId
+      in: path
+      description: 'recipeId'
+      required: true
+      schema:
+        type: integer
+        format: int64
+      example: 10
+  schemas:
+    RecipeSearchCriteria:
+      type: object
+      required:
+        - vegetarian
+        - servingCapacity
+        - ingredientIncluded
+        - recipeInstruction
+      properties:
+        vegetarian:
+          type: boolean
+          description: True if vegetarian, otherwise false
+          example: false
+        servingCapacity:
+          type: integer
+          format: int32
+          example: 4
+        ingredientIncluded:
+          type: string
+          example: "water"
+        recipeInstruction:
+          type: string
+          example: "add pasta"
+    PostRecipe:
+      type: object
+      required:
+        - name
+        - vegetarian
+        - servingCapacity
+        - ingredients
+        - recipeInstruction
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+          example: Pasta
+        vegetarian:
+          type: boolean
+          description: True if vegetarian, otherwise false
+          example: false
+        servingCapacity:
+          type: integer
+          format: int32
+          example: 4
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/PostIngredients'
+        recipeInstruction:
+          type: string
+          example: "add pasta"
+    UpdateRecipe:
+      type: object
+      required:
+        - name
+        - vegetarian
+        - servingCapacity
+        - ingredients
+        - recipeInstruction
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+          example: Pasta
+        vegetarian:
+          type: boolean
+          description: True if vegetarian, otherwise false
+          example: false
+        servingCapacity:
+          type: integer
+          format: int32
+          example: 4
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ingredients'
+        recipeInstruction:
+          type: string
+          example: "add pasta"
+    PostIngredients:
+      type: object
+      required:
+        - ingredient
+      properties:
+        ingredient:
+          type: string
+          example: "oil"
+    Ingredients:
+      type: object
+      required:
+        - id
+        - ingredient
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        ingredient:
+          type: string
+          example: "oil"
+    Recipe:
+      type: object
+      required:
+        - recipeId
+        - name
+        - vegetarian
+        - servingCapacity
+        - ingredients
+        - recipeInstruction
+      properties:
+        recipeId:
+          type: integer
+          format: int64
+          example: 10
+        name:
+          type: string
+          minLength: 1
+          maxLength: 80
+          example: Pasta
+        vegetarian:
+          type: boolean
+          description: True if vegetarian, otherwise false
+          example: false
+        servingCapacity:
+          type: integer
+          format: int32
+          example: 4
+        ingredients:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ingredients'
+        recipeInstruction:
+          type: string
+          example: "add pasta"
+    ListOfRecipe:
+      type: array
+      items:
+        $ref: '#/components/schemas/Recipe'
+    Error:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          description: http status code.
+          example: error code
+        errorMessage:
+          type: string
+          description: message
+          example: error message
+      example:
+        errorCode: error code
+        errorMessage: error message

@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+    driverClassName: org.h2.Driver
+  sql:
+    init.mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate.ddl-auto: none
+  h2:
+    console.enabled: true
+    console.path: /h2-ui
+  application:
+    name: recipe
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate.SQL: INFO
+    org.springframework.web: INFO
+    ROOT: INFO
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health, prometheus
+  server:
+    port: 8090

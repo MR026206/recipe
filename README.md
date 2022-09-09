@@ -32,7 +32,7 @@ For building and running the application you need:
 
 Alternatively you can use the Spring Boot Maven plugin like so:
 
-`mvn clean package`
+`mvn clean install`
 
 `mvn spring-boot:run`
 
